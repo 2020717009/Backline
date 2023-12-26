@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveForce;
     [SerializeField] private float jumpForce;
     private Animator anim;
-    private float input;
+    private float inputX;
+    private float inputY;
     private bool isJumping;
     private string isMoving = "isMoving";
     private string JumpCheck = "isJumping";
@@ -22,8 +23,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        input = Input.GetAxisRaw("Horizontal");
-        if (input < 0) sr.flipX = true; else if (input > 0) sr.flipX = false;
+        inputX = Input.GetAxisRaw("Horizontal");
+        inputY = Input.GetAxisRaw("Vertical");
+        if (inputX < 0) sr.flipX = true; else if (inputX > 0) sr.flipX = false;
 
         RunningAnimation();
 
@@ -33,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(input * moveForce * Time.deltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(inputX * moveForce * Time.deltaTime, inputY * moveForce * Time.deltaTime);
     }
 
     void OnCollisionEnter2D(Collision2D _collision)
@@ -50,6 +52,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void RunningAnimation()
     {
-        if(input != 0) anim.SetBool(isMoving, true); else anim.SetBool(isMoving, false);
+        if(inputX != 0 || inputY != 0) anim.SetBool(isMoving, true); else anim.SetBool(isMoving, false);
     }
 }
