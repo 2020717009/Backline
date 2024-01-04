@@ -44070,7 +44070,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 1352761794}
   enemiesPerWave: 10
-  spawnRadius: 5
+  spawnRadius: 10
   spawnInterval: 2
 --- !u!1 &1939760630
 GameObject:
