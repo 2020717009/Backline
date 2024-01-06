@@ -8,10 +8,12 @@ public class PlayerCombat : MonoBehaviour
     private Transform attackPoint;
     public float attackRange = 0.5f;
     private string isAttacking = "isAttacking";
+    public float swordAttackPower = 10f;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        
     }
     void Start()
     {
@@ -22,9 +24,18 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         anim.SetBool(isAttacking, false);
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetMouseButtonDown(0))
         {
             anim.SetBool(isAttacking, true);
+            Attack();
         }
+    }
+
+    void Attack()
+    {
+        // Saldýrý gerçekleþtirme
+        Debug.Log("Attack with power: " + swordAttackPower);
+
+        // Burada saldýrýnýn etkilerini uygulayabilirsiniz, düþmanlara zarar verebilirsiniz, vb.
     }
 }

@@ -44240,6 +44240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 0.5
+  swordAttackPower: 10
 --- !u!114 &1939760640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44253,6 +44254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 0.5
+  swordAttackPower: 10
 --- !u!70 &1939760641
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -44389,11 +44391,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5170987946594789702, guid: b7cb06c8f10abfb48a40aeea8846d5ee, type: 3}
       propertyPath: m_Name
-      value: KnightV2Prefab
+      value: EnemyPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 5566684574019026782, guid: b7cb06c8f10abfb48a40aeea8846d5ee, type: 3}
       propertyPath: hiz
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8208876530408607508, guid: b7cb06c8f10abfb48a40aeea8846d5ee, type: 3}
+      propertyPath: m_Name
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5566684574019026782, guid: b7cb06c8f10abfb48a40aeea8846d5ee, type: 3}

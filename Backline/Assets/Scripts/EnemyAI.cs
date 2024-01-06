@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ates") // Ates tag'ini kullandým, siz kendi oyununuzun kurallarýna göre ayarlayabilirsiniz.
+        if (collision.gameObject.tag == "Ateþ") // Ates tag'ini kullandým, siz kendi oyununuzun kurallarýna göre ayarlayabilirsiniz.
         {
             Vur();
         }
