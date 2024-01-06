@@ -206,3 +206,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hiz: 5
   durmaMesafesi: 1
+  baslangicSaglik: 10
+  saldiriGucu: 2
